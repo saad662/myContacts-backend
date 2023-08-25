@@ -17,11 +17,15 @@
 
 <p>The application relies on the following dependencies:</p>
 
-<ul>
-  <li><code>bcrypt</code>: Library for hashing passwords securely.</li>
-  <li><code>dotenv</code>: Loads environment variables from a <code>.env</code> file.</li>
-  <!-- Add more dependencies here -->
-</ul>
+  <ul>
+    <li><code>bcrypt</code>: Library for hashing passwords securely.</li>
+    <li><code>dotenv</code>: Loads environment variables from a <code>.env</code> file.</li>
+    <li><code>express</code>: Web application framework for building APIs.</li>
+    <li><code>express-async-handler</code>: Handles asynchronous errors in Express routes.</li>
+    <li><code>jsonwebtoken</code>: Generates JSON Web Tokens for user authentication.</li>
+    <li><code>mongoose</code>: Object Data Modeling (ODM) library for MongoDB.</li>
+    <li><code>nodemon</code> (dev): Monitors changes and restarts the server during development.</li>
+  </ul>
 
 <h2 id="getting-started">Getting Started</h2>
 
@@ -48,8 +52,86 @@ ACCESS_TOKEN_SECRET=your_access_token_secret</code></pre>
 
 <!-- Add more configuration details here -->
 
-<!-- Add more sections like API Endpoints, Usage, Contributing, and License -->
+<h2 id="api-endpoints">API Endpoints</h2>
+  <h3>User Authentication</h3>
+  <ul>
+    <li>
+      <strong>Register a User</strong>
+      <br>
+      <em>Route:</em> <code>POST /api/register</code>
+      <br>
+      <em>Access:</em> Public
+      <br>
+      Registers a new user and returns the user's email upon successful registration.
+    </li>
+    <li>
+      <strong>Login a User</strong>
+      <br>
+      <em>Route:</em> <code>POST /api/login</code>
+      <br>
+      <em>Access:</em> Public
+      <br>
+      Logs in a user and returns a JWT access token.
+    </li>
+    <li>
+      <strong>Get Current User</strong>
+      <br>
+      <em>Route:</em> <code>GET /api/current</code>
+      <br>
+      <em>Access:</em> Private
+      <br>
+      Returns the current user's information based on the provided JWT token.
+    </li>
+  </ul>
 
+  <h3>Contacts</h3>
+  <ul>
+    <li>
+      <strong>Get All Contacts</strong>
+      <br>
+      <em>Route:</em> <code>GET /api/contacts</code>
+      <br>
+      <em>Access:</em> Private
+      <br>
+      Retrieves all contacts associated with the authenticated user.
+    </li>
+    <li>
+      <strong>Create New Contact</strong>
+      <br>
+      <em>Route:</em> <code>POST /api/contacts</code>
+      <br>
+      <em>Access:</em> Private
+      <br>
+      Creates a new contact and associates it with the authenticated user.
+    </li>
+    <li>
+      <strong>Get Contact by ID</strong>
+      <br>
+      <em>Route:</em> <code>GET /api/contacts/:id</code>
+      <br>
+      <em>Access:</em> Private
+      <br>
+      Retrieves a specific contact by its ID, if it belongs to the authenticated user.
+    </li>
+    <li>
+      <strong>Update Contact</strong>
+      <br>
+      <em>Route:</em> <code>PUT /api/contacts/:id</code>
+      <br>
+      <em>Access:</em> Private
+      <br>
+      Updates a specific contact's information, if it belongs to the authenticated user.
+    </li>
+    <li>
+      <strong>Delete Contact</strong>
+      <br>
+      <em>Route:</em> <code>DELETE /api/contacts/:id</code>
+      <br>
+      <em>Access:</em> Private
+      <br>
+      Deletes a specific contact, if it belongs to the authenticated user.
+    </li>
+  </ul>
 <h2 id="usage">Usage</h2>
 
 <ol>
@@ -57,7 +139,7 @@ ACCESS_TOKEN_SECRET=your_access_token_secret</code></pre>
   <li>Start the server:</li>
 </ol>
 
-<pre><code>npm start</code></pre>
+<pre><code>npm start  ||  npm run dev</code></pre>
 
 <!-- Add more usage instructions here -->
 
