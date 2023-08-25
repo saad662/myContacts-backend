@@ -31,8 +31,8 @@
   <li>Clone the repository:</li>
 </ol>
 
-<pre><code>git clone https://github.com/your-username/mycontacts-backend.git
-cd mycontacts-backend</code></pre>
+<pre><code>git clone https://github.com/saad662/myContacts-backend.git
+cd myContacts-backend</code></pre>
 
 <!-- Add more installation steps here -->
 
