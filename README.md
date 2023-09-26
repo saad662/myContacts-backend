@@ -129,7 +129,7 @@ ACCESS_TOKEN_SECRET=your_access_token_secret</code></pre>
       <br>
       <em>Access:</em> Private
       <br>
-      Deletes a specific contact, if it belongs to the authenticated user.
+      Delete a specific contact, if it belongs to the authenticated user.
     </li>
   </ul>
 <h2 id="usage">Usage</h2>
